@@ -1,5 +1,5 @@
 // BANK MANAGEMENT SYSTEM
-// project that manages the basic activity of the bank
+// project that manages the basic activity of the bank;
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
