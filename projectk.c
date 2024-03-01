@@ -79,11 +79,10 @@ void show_options()
     printf("===================================================================================================\n");
     printf("\nChoose the following options:\n");
     printf("\tpress 1; to create a new account.\n");
-    printf("\tpress 2; to diposite the cash.\n");
+    printf("\tpress 2; to deposit the cash.\n");
     printf("\tpress 3; to withdraw the cash.\n");
     printf("\tpress 4; to get Bank Account Details.\n");
     printf("\tpress 5; to exit from the system.\n");
-    printf("\tpress 6; to report a problem.\n");
 }
 int getacc()
 {
@@ -119,7 +118,7 @@ void newaccount()
     printf("Enter the branch of bank\n");
     fflush(stdin);
     scanf("%s", branch);
-    printf("Which type of account you want to open:\n1.saving\n2.fixed diposite\n3.current account\n...");
+    printf("Which type of account you want to open:\n1.saving\n2.fixed deposit\n3.current account\n...");
     scanf("%d", &actype);
     if (actype == 3)
     {
@@ -127,7 +126,7 @@ void newaccount()
     }
     else if (actype == 2)
     {
-        strcpy(a.accounttype, "Fixed Diposite");
+        strcpy(a.accounttype, "Fixed Deposit");
     }
     else
     {
@@ -187,7 +186,7 @@ void update_balance(int x)
     int acn, i = 0;
     if (x == 2)
     {
-        printf("Enter the Account Number in which you want to deposite amount. \n");
+        printf("Enter the Account Number in which you want to deposit amount. \n");
     }
     if (x == 3)
     {
@@ -204,7 +203,7 @@ void update_balance(int x)
             account_details(b);
             if (x == 2)
             {
-                printf("Enter the Amount you want to deposite.\n");
+                printf("Enter the Amount you want to deposit.\n");
                 scanf("%lf", &cash);
                 printf("Please deposit your cash to cash counter.\tThank You.\n\n");
                 b.balance = b.balance + cash;
